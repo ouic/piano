@@ -1,0 +1,79 @@
+#keyboard {
+  position: relative;
+  display: flex;
+  width: 840px;
+}
+
+.key {
+  width: 40px;
+  height: 200px;
+  border: 1px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  cursor: pointer;
+  user-select: none;
+  background-color: #fff;
+  position: relative;
+  z-index: 1;
+  transition: all 0.1s ease-in-out;
+}
+
+.key.black {
+  background-color: #000;
+  color: #fff;
+  width: 30px;
+  height: 120px;
+  position: absolute;
+  z-index: 2;
+  left: 0; /* Suppression de translateX(-50%) pour éviter les décalages */
+  margin-left: -15px; /* Centrer par rapport à la touche blanche */
+  transition: all 0.1s ease-in-out;
+}
+
+.key.active {
+  background-color: #ccc;
+  transform: translateY(4px);
+  box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.key.black.active {
+  background-color: #333;
+  transform: translateY(4px); /* Seules les touches noires s'enfoncent verticalement */
+  box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.key:nth-child(2) { left: 42px; }  /* C# */
+.key:nth-child(4) { left: 82px; }  /* D# */
+.key:nth-child(7) { left: 168px; } /* F# */
+.key:nth-child(9) { left: 210px; } /* G# */
+.key:nth-child(11) { left: 252px; }/* A# */
+
+/* Deuxième octave */
+.key:nth-child(14) { left: 336px; } /* C#5 */
+.key:nth-child(16) { left: 378px; } /* D#5 */
+.key:nth-child(19) { left: 462px; } /* F#5 */
+.key:nth-child(21) { left: 504px; } /* G#5 */
+.key:nth-child(23) { left: 546px; } /* A#5 */
+
+/* Troisième octave */
+.key:nth-child(26) { left: 630px; } /* C#6 */
+.key:nth-child(28) { left: 672px; } /* D#6 */
+.key:nth-child(31) { left: 756px; } /* F#6 */
+.key:nth-child(33) { left: 770px; } /* G#6 */
+.key:nth-child(35) { left: 810px; } /* A#6 */
+
+#controls {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+#controls label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.gray-title {
+  color: gray;
+}
